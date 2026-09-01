@@ -1,8 +1,29 @@
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./Header.scss";
 
+
+
 function Header() {
+  const navigate = useNavigate();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
+
+  const currentUser = JSON.parse(
+    localStorage.getItem("currentUser")
+  );
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+  
+    setIsLoggedIn(false);
+  
+    navigate("/");
+  };
+
   return (
     <header className="header">
       <div className="header__container">
@@ -57,19 +78,36 @@ function Header() {
 
         <div className="header__auth">
 
-<Link
-  to="/login"
-  className="header__login"
->
-  შესვლა
-</Link>
+{isLoggedIn ? (
+  <>
+    <span className="header__user">
+      გამარჯობა, {currentUser?.name}
+    </span>
 
-<Link
-  to="/register"
-  className="header__register"
->
-  რეგისტრაცია
-</Link>
+    <button
+      className="header__logout"
+      onClick={handleLogout}
+    >
+      გასვლა
+    </button>
+  </>
+) : (
+  <>
+    <Link
+      to="/login"
+      className="header__login"
+    >
+      შესვლა
+    </Link>
+
+    <Link
+      to="/register"
+      className="header__register"
+    >
+      რეგისტრაცია
+    </Link>
+  </>
+)}
 
 </div>
 

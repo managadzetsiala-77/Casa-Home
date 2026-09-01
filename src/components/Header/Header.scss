@@ -173,10 +173,43 @@
   
     color: $white-color;
   
-    
+
     &:hover {
       background-color: $secondary-color;
   
       transform: translateY(-2px);
+    }
+  }
+  .header__user {
+    color: $text-color;
+  
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .header__logout {
+    min-height: 40px;
+  
+    padding: 0 16px;
+  
+    border: 1px solid $border-color;
+    border-radius: 7px;
+  
+    background-color: transparent;
+  
+    color: $text-color;
+  
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+  
+    cursor: pointer;
+  
+    transition: 0.3s;
+  
+    &:hover {
+      border-color: $primary-color;
+  
+      color: $primary-color;
     }
   }

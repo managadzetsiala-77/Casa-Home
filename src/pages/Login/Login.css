@@ -1,0 +1,118 @@
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f7f4ef;
+}
+.auth-page__card {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  border: 1px solid #e5e0d8;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+.auth-page__header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.auth-page__logo {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #b58b5a;
+  font-size: 26px;
+  font-weight: 700;
+}
+.auth-page__header h1 {
+  margin-bottom: 8px;
+  color: #1f1f1f;
+  font-size: 30px;
+}
+.auth-page__header p {
+  color: #777777;
+  font-size: 14px;
+}
+.auth-page__footer {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 25px;
+  color: #777777;
+  font-size: 14px;
+}
+.auth-page__footer a {
+  color: #b58b5a;
+  font-weight: 600;
+}
+.auth-page__footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-form__group {
+  margin-bottom: 20px;
+}
+.auth-form__group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 600;
+}
+.auth-form__group input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #e5e0d8;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.3s;
+}
+.auth-form__group input:focus {
+  border-color: #b58b5a;
+}
+.auth-form__error {
+  display: block;
+  margin-top: 6px;
+  color: #d64545;
+  font-size: 12px;
+}
+.auth-form__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b58b5a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.auth-form__button:hover {
+  background-color: #8f6b45;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 40px 15px;
+  }
+  .auth-page__card {
+    padding: 30px 20px;
+  }
+}
+.auth-form__login-error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid #e4b4b4;
+  border-radius: 7px;
+  background-color: #fff4f4;
+  color: #c43d3d;
+  font-size: 13px;
+  line-height: 1.5;
+}/*# sourceMappingURL=Login.css.map */

@@ -116,4 +116,28 @@
 .header__register:hover {
   background-color: #8f6b45;
   transform: translateY(-2px);
+}
+
+.header__user {
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header__logout {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid #e5e0d8;
+  border-radius: 7px;
+  background-color: transparent;
+  color: #1f1f1f;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header__logout:hover {
+  border-color: #b58b5a;
+  color: #b58b5a;
 }/*# sourceMappingURL=Header.css.map */
