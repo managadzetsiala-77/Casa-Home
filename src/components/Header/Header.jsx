@@ -31,6 +31,8 @@ function Header() {
           </Link>
         </nav>
 
+ 
+
         <div className="header__actions">
 
           <Link
@@ -51,14 +53,25 @@ function Header() {
             🌙
           </button>
 
-          <Link
-            to="/login"
-            className="header__login"
-          >
-            შესვლა
-          </Link>
-
         </div>
+
+        <div className="header__auth">
+
+<Link
+  to="/login"
+  className="header__login"
+>
+  შესვლა
+</Link>
+
+<Link
+  to="/register"
+  className="header__register"
+>
+  რეგისტრაცია
+</Link>
+
+</div>
 
       </div>
     </header>

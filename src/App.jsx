@@ -13,6 +13,7 @@ import Register from "./pages/Register/Register";
 import Cart from "./pages/Cart/Cart";
 import Favorites from "./pages/Favorites/Favorites";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,15 +24,9 @@ function App() {
 
         <Route path="/products" element={<Products />} />
 
-        <Route
-          path="/products/:id"
-          element={<ProductDetails />}
-        />
+        <Route path="/products/:id" element={<ProductDetails />} />
 
-        <Route
-          path="/categories"
-          element={<Categories />}
-        />
+        <Route path="/categories" element={<Categories />} />
 
         <Route path="/about" element={<About />} />
 
@@ -43,10 +38,7 @@ function App() {
 
         <Route path="/cart" element={<Cart />} />
 
-        <Route
-          path="/favorites"
-          element={<Favorites />}
-        />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </BrowserRouter>
   );
