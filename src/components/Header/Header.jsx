@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./Header.scss";
 
 
@@ -10,6 +11,16 @@ function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") === "true"
   );
+
+  const cartItems = useSelector((state) => state.cart.items);
+
+  const favoriteItems = useSelector((state) => state.favorites.items);
+
+  const cartCount = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+  const favoriteCount = favoriteItems.length;
 
   const currentUser = JSON.parse(
     localStorage.getItem("currentUser")
@@ -56,19 +67,22 @@ function Header() {
 
         <div className="header__actions">
 
-          <Link
-            to="/favorites"
-            className="header__icon"
-          >
-            ♡
-          </Link>
+        <Link to="/favorites" className="header__action">
+  ♡
+  
+  {favoriteCount > 0 && (
+    <b className="header__badge">{favoriteCount}</b>
+  )}
+</Link>
 
-          <Link
-            to="/cart"
-            className="header__icon"
-          >
-            🛒
-          </Link>
+        <Link to="/cart" className="header__action">
+  🛒
+ 
+  {cartCount > 0 && (
+    <b className="header__badge">{cartCount}</b>
+  )}
+</Link>
+
 
           <button className="header__icon">
             🌙
