@@ -1,0 +1,127 @@
+.checkout {
+  min-height: 80vh;
+  padding: 60px 20px;
+}
+.checkout__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.checkout__header {
+  margin-bottom: 40px;
+}
+.checkout__header h1 {
+  margin-bottom: 10px;
+}
+.checkout__header p {
+  color: #777;
+}
+.checkout__content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.checkout__form, .checkout__summary {
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+}
+.checkout__form h2 {
+  margin-bottom: 25px;
+}
+.checkout__form h2:not(:first-child) {
+  margin-top: 35px;
+}
+.checkout__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.checkout__field label {
+  font-weight: 600;
+}
+.checkout__field input,
+.checkout__field select,
+.checkout__field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+  outline: none;
+}
+.checkout__field textarea {
+  resize: vertical;
+}
+.checkout__field span {
+  color: #d33;
+  font-size: 13px;
+}
+.checkout__submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.checkout__summary {
+  position: sticky;
+  top: 20px;
+}
+.checkout__summary h2 {
+  margin-bottom: 25px;
+}
+.checkout__product {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.checkout__product img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.checkout__product h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.checkout__product p {
+  color: #777;
+  font-size: 14px;
+}
+.checkout__total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+  font-size: 20px;
+}
+.checkout__empty {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+.checkout__empty p {
+  margin: 15px 0 25px;
+  color: #777;
+}
+.checkout__empty a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .checkout__content {
+    grid-template-columns: 1fr;
+  }
+  .checkout__summary {
+    position: static;
+  }
+}/*# sourceMappingURL=Checkout.css.map */

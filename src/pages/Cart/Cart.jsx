@@ -138,9 +138,12 @@ function Cart() {
               <strong>{totalPrice} ₾</strong>
             </div>
 
-            <button className="cart__checkout">
-              შეკვეთის გაფორმება
-            </button>
+            <Link
+  to="/checkout"
+  className="cart__checkout"
+>
+  შეკვეთის გაფორმება
+</Link>
 
           </aside>
 
