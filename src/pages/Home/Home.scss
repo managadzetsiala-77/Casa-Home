@@ -335,3 +335,22 @@
       }
     }
   }
+  body.dark {
+    .categories {
+      background-color: #181818;
+    }
+  
+    .products-section {
+      background-color: #181818;
+    }
+  
+    .section-heading {
+      &__title {
+        color: #ffffff;
+      }
+  
+      &__text {
+        color: #b5b5b5;
+      }
+    }
+  }

@@ -16,3 +16,10 @@
     line-height: 1.5;
   }
 }
+body.dark {
+  .auth-form__login-error {
+    background-color: #352222;
+    border-color: #663838;
+    color: #ff9b9b;
+  }
+}

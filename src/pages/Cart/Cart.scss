@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .cart {
     padding: 60px 20px;
     min-height: 70vh;
@@ -83,10 +85,12 @@
       button {
         width: 32px;
         height: 32px;
+        padding: 3px;
   
         border: 1px solid #ddd;
         background: #fff;
         border-radius: 6px;
+        
   
         cursor: pointer;
         font-size: 18px;
@@ -106,6 +110,7 @@
     &__remove {
       border: none;
       background: transparent;
+      
   
       cursor: pointer;
       font-size: 18px;
@@ -119,6 +124,7 @@
   
     &__summary {
       padding: 25px;
+      
   
       border: 1px solid #e5e5e5;
       border-radius: 14px;
@@ -145,7 +151,7 @@
       display: flex;
       justify-content: space-between;
   
-      margin-top: 20px;
+      margin: 20px;
       padding-top: 20px;
   
       border-top: 1px solid #ddd;
@@ -163,7 +169,8 @@
       margin-top: 25px;
       padding: 14px;
   
-      border: none;
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
       border-radius: 8px;
   
       cursor: pointer;
@@ -271,5 +278,69 @@
         grid-column: 2;
         justify-self: start;
       }
+    }
+  }
+  body.dark {
+    .cart {
+      background-color: #181818;
+      color: #ffffff;
+    }
+  
+    .cart__header {
+      h1 {
+        color: #ffffff;
+      }
+  
+      span {
+        color: #b5b5b5;
+      }
+    }
+  
+    .cart__item {
+      background-color: #242424;
+      border-color: #383838;
+    }
+  
+    .cart__info {
+      h2 {
+        color: #ffffff;
+      }
+    }
+  
+    .cart__category {
+      color: #999999;
+    }
+  
+    .cart__price,
+    .cart__item-total {
+      color: #ffffff;
+    }
+  
+    .cart__quantity {
+      button {
+        background-color: #333333;
+        color: #ffffff;
+  
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+  
+    .cart__summary {
+      background-color: #242424;
+      border-color: #383838;
+  
+      h2 {
+        color: #ffffff;
+      }
+    }
+  
+    .cart__summary-row {
+      color: #b5b5b5;
+    }
+  
+    .cart__summary-total {
+      color: #ffffff;
     }
   }

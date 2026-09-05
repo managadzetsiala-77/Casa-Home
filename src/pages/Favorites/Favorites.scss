@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .favorites {
     padding: 60px 20px;
     min-height: 70vh;
@@ -74,5 +76,36 @@
   @media (max-width: 500px) {
     .favorites__grid {
       grid-template-columns: 1fr;
+    }
+  }
+  body.dark {
+    .favorites {
+      background-color: #181818;
+      color: #ffffff;
+    }
+  
+    .favorites__container > h1 {
+      color: #ffffff;
+    }
+  
+    .favorites__card {
+      background-color: #242424;
+      border-color: #383838;
+  
+      h2 {
+        color: #ffffff;
+      }
+  
+      p {
+        color: #b5b5b5;
+      }
+    }
+  
+    .favorites__empty {
+      color: #ffffff;
+  
+      p {
+        color: #b5b5b5;
+      }
     }
   }

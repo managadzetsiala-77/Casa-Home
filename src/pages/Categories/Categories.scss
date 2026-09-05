@@ -1,0 +1,150 @@
+@use "../../styles/variables" as *;
+
+
+.categories {
+    min-height: 80vh;
+    padding: 60px 20px;
+  
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    &__header {
+      text-align: center;
+      margin-bottom: 40px;
+  
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+  
+      h1 {
+        margin: 10px 0;
+        font-size: 42px;
+      }
+  
+      p {
+        color: #777;
+      }
+    }
+  
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+  
+      button {
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.3s;
+  
+        &:hover {
+          transform: translateY(-2px);
+        }
+  
+        &.active {
+          background: #222;
+          color: #fff;
+          border-color: #222;
+        }
+      }
+    }
+  
+    &__products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  
+    &__card {
+      color: inherit;
+      text-decoration: none;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      transition: 0.3s;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  
+    &__card-info {
+      padding: 16px;
+  
+      span {
+        font-size: 13px;
+        color: #888;
+      }
+  
+      h2 {
+        font-size: 18px;
+        margin: 8px 0;
+      }
+  
+      strong {
+        font-size: 17px;
+      }
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .categories__products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .categories {
+      padding: 40px 15px;
+  
+      &__header h1 {
+        font-size: 32px;
+      }
+  
+      &__products {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  body.dark {
+    .categories {
+      background-color: #181818;
+      color: #ffffff;
+    }
+  
+    .categories__title {
+      color: #ffffff;
+    }
+  
+    .categories__text {
+      color: #b5b5b5;
+    }
+  
+    button {
+      background-color: $background-color;
+      color: $text-color;
+      border-color: #444444;
+  
+      &:hover,
+      &.active {
+       background-color: $primary-color;
+        color: $white-color;
+        border-color: $primary-color;
+      }
+    }
+  }

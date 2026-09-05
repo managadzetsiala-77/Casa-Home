@@ -15,6 +15,7 @@ body {
   background-color: $background-color;
   color: $text-color;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button,
@@ -36,4 +37,29 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+// body {
+//   background: #ffffff;
+//   color: #222222;
+//   transition: background-color 0.3s ease, color 0.3s ease;
+// }
+
+body.dark {
+  background-color: #181818;
+  color: #ffffff;
+
+  .home,
+  .products,
+  .product-details,
+  .categories,
+  .about,
+  .contact,
+  .login,
+  .register,
+  .cart,
+  .favorites,
+  .checkout {
+    background-color:$dark-background;
+    color:$white-color;
+  }
 }

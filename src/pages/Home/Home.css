@@ -239,4 +239,16 @@
   .section-heading__title {
     font-size: 32px;
   }
+}
+body.dark .categories {
+  background-color: #181818;
+}
+body.dark .products-section {
+  background-color: #181818;
+}
+body.dark .section-heading__title {
+  color: #ffffff;
+}
+body.dark .section-heading__text {
+  color: #b5b5b5;
 }/*# sourceMappingURL=Home.css.map */

@@ -106,6 +106,48 @@
     padding: 30px 20px;
   }
 }
+body.dark .auth-page {
+  background-color: #181818;
+  color: #ffffff;
+}
+body.dark .auth-page__card {
+  background-color: #242424;
+  color: #ffffff;
+  border-color: #383838;
+}
+body.dark .auth-page__logo {
+  color: #ffffff;
+}
+body.dark .auth-page__header h1 {
+  color: #ffffff;
+}
+body.dark .auth-page__header p {
+  color: #b5b5b5;
+}
+body.dark .auth-form label {
+  color: #ffffff;
+}
+body.dark .auth-form input {
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #444444;
+}
+body.dark .auth-form input::-moz-placeholder {
+  color: #999999;
+}
+body.dark .auth-form input::placeholder {
+  color: #999999;
+}
+body.dark .auth-form input:focus {
+  border-color: #b58b5a;
+}
+body.dark .auth-page__footer {
+  color: #b5b5b5;
+}
+body.dark .auth-page__footer a {
+  color: #b58b5a;
+}
+
 .auth-form__login-error {
   margin-bottom: 20px;
   padding: 12px 14px;
@@ -115,4 +157,10 @@
   color: #c43d3d;
   font-size: 13px;
   line-height: 1.5;
+}
+
+body.dark .auth-form__login-error {
+  background-color: #352222;
+  border-color: #663838;
+  color: #ff9b9b;
 }/*# sourceMappingURL=Login.css.map */

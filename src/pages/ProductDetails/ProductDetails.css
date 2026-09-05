@@ -253,4 +253,21 @@
   border-radius: 8px;
   font-size: 14px;
   line-height: 1.6;
+}
+
+body.dark .product-details {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .product-details__title {
+  color: #ffffff;
+}
+body.dark .product-details__category {
+  color: #a8a8a8;
+}
+body.dark .product-details__price {
+  color: #ffffff;
+}
+body.dark .product-details__old-price {
+  color: #888888;
 }/*# sourceMappingURL=ProductDetails.css.map */

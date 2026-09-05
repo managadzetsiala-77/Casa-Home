@@ -13,8 +13,19 @@ import Register from "./pages/Register/Register";
 import Cart from "./pages/Cart/Cart";
 import Favorites from "./pages/Favorites/Favorites";
 import Checkout from "./pages/Checkout/Checkout";
+import { useEffect } from "react";
+import { useThemeStore } from "./store/themeStore";
+
+
 
 function App() {
+
+  const isDark = useThemeStore((state) => state.isDark);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", isDark);
+  }, [isDark]);
+
   return (
     <BrowserRouter>
       <Header />

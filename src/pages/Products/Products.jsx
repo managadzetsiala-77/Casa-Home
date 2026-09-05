@@ -96,10 +96,10 @@ function Products() {
                   <button
                     key={category}
                     className={
-                      selectedCategory === category
-                        ? "category-button category-button--active"
-                        : "category-button"
-                    }
+                selectedCategory === category
+                  ? "active"
+                  : ""
+              }
                     onClick={() =>
                       setSelectedCategory(category)
                     }

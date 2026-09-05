@@ -63,4 +63,27 @@
   .favorites__grid {
     grid-template-columns: 1fr;
   }
+}
+body.dark .favorites {
+  background-color: #181818;
+  color: #ffffff;
+}
+body.dark .favorites__container > h1 {
+  color: #ffffff;
+}
+body.dark .favorites__card {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .favorites__card h2 {
+  color: #ffffff;
+}
+body.dark .favorites__card p {
+  color: #b5b5b5;
+}
+body.dark .favorites__empty {
+  color: #ffffff;
+}
+body.dark .favorites__empty p {
+  color: #b5b5b5;
 }/*# sourceMappingURL=Favorites.css.map */

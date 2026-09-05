@@ -1,12 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useThemeStore } from "../../store/themeStore";
 import "./Header.scss";
 
 
 
 function Header() {
   const navigate = useNavigate();
+
+  const { isDark, toggleTheme } = useThemeStore();
 
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") === "true"
@@ -84,9 +87,13 @@ function Header() {
 </Link>
 
 
-          <button className="header__icon">
-            🌙
-          </button>
+          <button
+  className="theme-button"
+  onClick={toggleTheme}
+  aria-label="თემის შეცვლა"
+>
+  {isDark ? "☀️" : "🌙"}
+</button>
 
         </div>
 

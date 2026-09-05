@@ -195,7 +195,7 @@
     border: 1px solid $border-color;
     border-radius: 7px;
   
-    background-color: transparent;
+    background-color: $primary-color;
   
     color: $text-color;
   
@@ -210,7 +210,7 @@
     &:hover {
       border-color: $primary-color;
   
-      color: $primary-color;
+      color: $white-color;
     }
   }
   .header__action {
@@ -225,9 +225,64 @@
     min-width: 20px;
     height: 20px;
     padding: 0 5px;
-    border-radius: 50%;
+  
     display: flex;
     align-items: center;
     justify-content: center;
+  
+    border-radius: 50%;
+  
+    background-color: $primary-color;
+    color: $white-color;
+  
     font-size: 12px;
+    font-weight: 600;
+  }
+  .theme-button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: rotate(15deg) scale(1.1);
+    }
+  }
+  body.dark {
+    .header {
+      background-color: #242424;
+      border-bottom-color: #383838;
+    }
+  
+    .header__logo {
+      color: #ffffff;
+    }
+  
+    .header__nav a {
+      color: #ffffff;
+  
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  
+    .header__user {
+      color: #ffffff;
+    }
+  
+    .header__logout {
+      border-color: #444444;
+      color: #ffffff;
+  
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+    }
+  
+    .header__action {
+      color: #ffffff;
+    }
   }

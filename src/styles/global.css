@@ -13,6 +13,7 @@ body {
   background-color: #f7f4ef;
   color: #1f1f1f;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button,
@@ -34,4 +35,23 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+body.dark {
+  background-color: #181818;
+  color: #ffffff;
+}
+body.dark .home,
+body.dark .products,
+body.dark .product-details,
+body.dark .categories,
+body.dark .about,
+body.dark .contact,
+body.dark .login,
+body.dark .register,
+body.dark .cart,
+body.dark .favorites,
+body.dark .checkout {
+  background-color: #181818;
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */

@@ -129,7 +129,7 @@
   padding: 0 16px;
   border: 1px solid #e5e0d8;
   border-radius: 7px;
-  background-color: transparent;
+  background-color: #b58b5a;
   color: #1f1f1f;
   font-family: inherit;
   font-size: 14px;
@@ -139,7 +139,7 @@
 }
 .header__logout:hover {
   border-color: #b58b5a;
-  color: #b58b5a;
+  color: #ffffff;
 }
 
 .header__action {
@@ -154,9 +154,52 @@
   min-width: 20px;
   height: 20px;
   padding: 0 5px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: #b58b5a;
+  color: #ffffff;
   font-size: 12px;
+  font-weight: 600;
+}
+
+.theme-button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+.theme-button:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+body.dark .header {
+  background-color: #242424;
+  border-bottom-color: #383838;
+}
+body.dark .header__logo {
+  color: #ffffff;
+}
+body.dark .header__nav a {
+  color: #ffffff;
+}
+body.dark .header__nav a:hover {
+  color: #b58b5a;
+}
+body.dark .header__user {
+  color: #ffffff;
+}
+body.dark .header__logout {
+  border-color: #444444;
+  color: #ffffff;
+}
+body.dark .header__logout:hover {
+  border-color: #b58b5a;
+  color: #b58b5a;
+}
+body.dark .header__action {
+  color: #ffffff;
 }/*# sourceMappingURL=Header.css.map */

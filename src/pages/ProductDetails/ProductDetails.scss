@@ -364,3 +364,25 @@
     line-height: 1.6;
   }
   
+body.dark {
+  .product-details {
+    background-color: #242424;
+    border-color: #383838;
+  }
+
+  .product-details__title {
+    color: #ffffff;
+  }
+
+  .product-details__category {
+    color: #a8a8a8;
+  }
+
+  .product-details__price {
+    color: #ffffff;
+  }
+
+  .product-details__old-price {
+    color: #888888;
+  }
+}
