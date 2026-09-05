@@ -152,3 +152,67 @@
       position: static;
     }
   }
+  body.dark {
+    .checkout {
+      background-color: #181818;
+      color: #ffffff;
+    }
+  
+    .checkout__form,
+    .checkout__summary {
+      background-color: #242424;
+      border-color: #383838;
+    }
+  
+    .checkout__header h1,
+    .checkout__form h2,
+    .checkout__summary h2 {
+      color: #ffffff;
+    }
+  
+    .checkout__header p {
+      color: #b5b5b5;
+    }
+  
+    .checkout__field {
+      label {
+        color: #ffffff;
+      }
+  
+      input,
+      select,
+      textarea {
+        background-color: #303030;
+        color: #ffffff;
+        border-color: #444444;
+  
+        &::placeholder {
+          color: #999999;
+        }
+      }
+    }
+  
+    .checkout__product {
+      border-bottom-color: #383838;
+  
+      h3 {
+        color: #ffffff;
+      }
+  
+      p {
+        color: #aaaaaa;
+      }
+    }
+  
+    .checkout__total {
+      border-top-color: #383838;
+  
+      span {
+        color: #b5b5b5;
+      }
+  
+      strong {
+        color: #ffffff;
+      }
+    }
+  }

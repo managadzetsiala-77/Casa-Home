@@ -144,31 +144,24 @@
     font-size: 28px;
   }
 }
-body.dark .about__hero {
-  background: #242424;
+body.dark .about {
+  background-color: #181818;
+  color: #ffffff;
 }
-body.dark .about__hero p {
-  color: #aaa;
-}
-body.dark .about__story {
-  background: #181818;
-}
-body.dark .about__story__text p {
-  color: #aaa;
-}
+body.dark .about__hero,
+body.dark .about__story,
 body.dark .about__values {
-  background: #242424;
+  color: #ffffff;
 }
-body.dark .about__image {
-  background: #b58b5a;
-  color: #181818;
+body.dark .about__title,
+body.dark .about__heading {
+  color: #ffffff;
 }
-body.dark .about__cards article {
-  background: #181818;
+body.dark .about__text,
+body.dark .about__description {
+  color: #b5b5b5;
 }
-body.dark .about__cards article span {
-  color: #aaa;
-}
-body.dark .about__cards article p {
-  color: #aaa;
+body.dark .about__card {
+  background-color: #242424;
+  border-color: #383838;
 }/*# sourceMappingURL=About.css.map */

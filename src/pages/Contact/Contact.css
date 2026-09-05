@@ -119,4 +119,35 @@
   .contact__form {
     padding: 25px;
   }
+}
+body.dark .contact {
+  background-color: #181818;
+  color: #ffffff;
+}
+body.dark .contact__title,
+body.dark .contact__heading {
+  color: #ffffff;
+}
+body.dark .contact__text {
+  color: #b5b5b5;
+}
+body.dark .contact__form {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .contact__form label {
+  color: #ffffff;
+}
+body.dark .contact__form input,
+body.dark .contact__form textarea {
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #444444;
+}
+body.dark .contact__form input::-moz-placeholder, body.dark .contact__form textarea::-moz-placeholder {
+  color: #999999;
+}
+body.dark .contact__form input::placeholder,
+body.dark .contact__form textarea::placeholder {
+  color: #999999;
 }/*# sourceMappingURL=Contact.css.map */

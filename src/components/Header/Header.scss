@@ -47,6 +47,10 @@
       &:hover {
         color: $primary-color;
       }
+      &.active {
+        color: $primary-color;
+        font-weight: 700;
+      }
     }
   }
 
@@ -263,9 +267,12 @@
     .header__nav a {
       color: #ffffff;
   
-      &:hover {
+      &:hover,
+      
+      &.active {
         color: $primary-color;
       }
+
     }
   
     .header__user {
@@ -274,11 +281,11 @@
   
     .header__logout {
       border-color: #444444;
-      color: #ffffff;
+      color: black;
   
       &:hover {
         border-color: $primary-color;
-        color: $primary-color;
+        color: $white-color;
       }
     }
   

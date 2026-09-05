@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useThemeStore } from "../../store/themeStore";
@@ -47,23 +47,25 @@ function Header() {
         </Link>
 
         <nav className="header__nav">
-          <Link to="/">მთავარი</Link>
+        <NavLink to="/" end>
+    მთავარი
+  </NavLink>
 
-          <Link to="/products">
-            პროდუქტები
-          </Link>
+          <NavLink to="/products">
+    პროდუქტები
+  </NavLink>
 
-          <Link to="/categories">
-            კატეგორიები
-          </Link>
+  <NavLink to="/categories">
+    კატეგორიები
+  </NavLink>
 
-          <Link to="/about">
-            ჩვენ შესახებ
-          </Link>
+  <NavLink to="/about">
+    ჩვენ შესახებ
+  </NavLink>
 
-          <Link to="/contact">
-            კონტაქტი
-          </Link>
+  <NavLink to="/contact">
+    კონტაქტი
+  </NavLink>
         </nav>
 
  

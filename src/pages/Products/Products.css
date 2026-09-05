@@ -158,35 +158,62 @@ button.active {
     grid-template-columns: 1fr;
   }
 }
-body.dark .products {
+body.dark .products-page {
   background-color: #181818;
   color: #ffffff;
-}
-body.dark .products__title {
-  color: #ffffff;
-}
-body.dark .products__text {
-  color: #b5b5b5;
 }
 body.dark .products-page__content {
   background-color: #181818;
 }
 body.dark .filters {
-  background-color: #777777;
+  background-color: #242424;
+  border-color: #383838;
 }
-body.dark .filters span {
-  color: #fff;
+body.dark .filters label,
+body.dark .filters > span, body.dark .filters__category > span {
+  color: #ffffff;
 }
-body.dark .filters label {
-  color: #fff;
-}
-body.dark .category-button {
-  background-color: #f7f4ef;
-  color: #1f1f1f;
+body.dark .filters input {
+  background-color: #303030;
+  color: #ffffff;
   border-color: #444444;
 }
-body.dark .category-button:hover, body.dark .category-button.active {
+body.dark .filters input::-moz-placeholder {
+  color: #999999;
+}
+body.dark .filters input::placeholder {
+  color: #999999;
+}
+body.dark .filters input:focus {
+  border-color: #b58b5a;
+}
+body.dark .category-buttons button {
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #444444;
+}
+body.dark .category-buttons button:hover {
+  border-color: #b58b5a;
+  color: #b58b5a;
+}
+body.dark .category-buttons button.active {
   background-color: #b58b5a;
   color: #ffffff;
   border-color: #b58b5a;
+}
+body.dark .products-header h2 {
+  color: #ffffff;
+}
+body.dark .products-header span {
+  color: #b5b5b5;
+}
+body.dark .products-empty {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .products-empty h2 {
+  color: #ffffff;
+}
+body.dark .products-empty p {
+  color: #b5b5b5;
 }/*# sourceMappingURL=Products.css.map */

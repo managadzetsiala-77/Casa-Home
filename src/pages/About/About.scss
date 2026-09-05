@@ -178,43 +178,30 @@
       }
     }
   }
-  body.dark{
-    
+  body.dark {
     .about {
-      &__hero {
-        background: #242424;
+      background-color: #181818;
+      color: #ffffff;
+    }
   
-        p {
-          color: #aaa;
-        }
-      }
+    .about__hero,
+    .about__story,
+    .about__values {
+      color: #ffffff;
+    }
   
-      &__story {
-        background: #181818;
+    .about__title,
+    .about__heading {
+      color: #ffffff;
+    }
   
-        &__text p {
-          color: #aaa;
-        }
-      }
+    .about__text,
+    .about__description {
+      color: #b5b5b5;
+    }
   
-      &__values {
-        background: #242424;
-      }
-      &__image{
-        background: $primary-color;
-        color:#181818
-      }
-  
-      &__cards article {
-        background: #181818;
-  
-        span {
-          color: #aaa;
-        }
-  
-        p {
-          color: #aaa;
-        }
-      }
+    .about__card {
+      background-color: #242424;
+      border-color: #383838;
     }
   }

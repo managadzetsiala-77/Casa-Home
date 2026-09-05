@@ -1,11 +1,15 @@
 import { Link, useParams } from "react-router-dom";
 import { products } from "../../data/products";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { toggleFavorite } from "../../store/favoritesSlice";
 import "./ProductDetails.scss";
 
 function ProductDetails() {
+  const [selectedRating, setSelectedRating] = useState(0);
+const [comment, setComment] = useState("");
+const [reviews, setReviews] = useState([]);
   const { id } = useParams();
 
   const dispatch = useDispatch();
@@ -37,6 +41,51 @@ function ProductDetails() {
         quantity: 1,
       })
     );
+  };
+  useEffect(() => {
+    const savedReviews = JSON.parse(
+      localStorage.getItem(`reviews-${id}`)
+    ) || [];
+  
+    setReviews(savedReviews);
+  }, [id]);
+
+  const handleReviewSubmit = (event) => {
+    event.preventDefault();
+  
+    if (!selectedRating || !comment.trim()) {
+      alert("გთხოვ, შეავსე შეფასება და კომენტარი.");
+      return;
+    }
+  
+    const currentUser = JSON.parse(
+      localStorage.getItem("currentUser")
+    );
+  
+    const newReview = {
+      id: Date.now(),
+      name: currentUser?.name || "მომხმარებელი",
+      rating: selectedRating,
+      comment: comment.trim(),
+      date: new Date().toLocaleDateString("ka-GE"),
+    };
+  
+    const updatedReviews = [
+      newReview,
+      ...reviews,
+    ];
+  
+    setReviews(updatedReviews);
+  
+    localStorage.setItem(
+      `reviews-${id}`,
+      JSON.stringify(updatedReviews)
+    );
+  
+    setSelectedRating(0);
+    setComment("");
+  
+    alert("მადლობა შეფასებისთვის! ⭐");
   };
 
   if (!product) {
@@ -163,6 +212,82 @@ function ProductDetails() {
             </div>
           </div>
         </div>
+        <section className="product-details__reviews">
+  <div className="product-details__reviews-header">
+    <div>
+      <h2>მომხმარებლის შეფასებები</h2>
+      <p>გაგვიზიარე შენი გამოცდილება</p>
+    </div>
+
+    <div className="product-details__overall-rating">
+      <span>★</span>
+      <strong>{product.rating}</strong>
+      <small>საერთო შეფასება</small>
+    </div>
+  </div>
+
+  <div className="product-details__review-list">
+  {reviews.length === 0 ? (
+    <p className="product-details__no-reviews">
+      ჯერ შეფასება არ არის. იყავი პირველი ვინც შეაფასებს პროდუქტს ⭐
+    </p>
+  ) : (
+    reviews.map((review) => (
+      <article
+        className="product-details__review"
+        key={review.id}
+      >
+        <div className="product-details__review-top">
+          <strong>{review.name}</strong>
+
+          <span>
+            {"★".repeat(review.rating)}
+            {"☆".repeat(5 - review.rating)}
+          </span>
+        </div>
+
+        <p>{review.comment}</p>
+
+        <small>{review.date}</small>
+      </article>
+    ))
+  )}
+</div>
+
+  <form
+    className="product-details__review-form"
+    onSubmit={handleReviewSubmit}
+  >
+    <h3>შეაფასე პროდუქტი</h3>
+
+    <div className="product-details__stars">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <button
+          type="button"
+          key={star}
+          onClick={() => setSelectedRating(star)}
+          className={star <= selectedRating ? "active" : ""}
+        >
+          ★
+        </button>
+      ))}
+    </div>
+
+    <textarea
+      value={comment}
+      onChange={(event) => setComment(event.target.value)}
+      placeholder="დაწერე შენი კომენტარი..."
+      rows="5"
+    />
+
+    <button
+      type="submit"
+      className="product-details__review-submit"
+    >
+      შეფასების გაგზავნა
+    </button>
+  </form>
+</section>
       </div>
     </main>
   );

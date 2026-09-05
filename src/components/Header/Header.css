@@ -35,6 +35,10 @@
 .header__nav a:hover {
   color: #b58b5a;
 }
+.header__nav a.active {
+  color: #b58b5a;
+  font-weight: 700;
+}
 .header__actions {
   display: flex;
   align-items: center;
@@ -186,7 +190,7 @@ body.dark .header__logo {
 body.dark .header__nav a {
   color: #ffffff;
 }
-body.dark .header__nav a:hover {
+body.dark .header__nav a:hover, body.dark .header__nav a.active {
   color: #b58b5a;
 }
 body.dark .header__user {
@@ -194,11 +198,11 @@ body.dark .header__user {
 }
 body.dark .header__logout {
   border-color: #444444;
-  color: #ffffff;
+  color: black;
 }
 body.dark .header__logout:hover {
   border-color: #b58b5a;
-  color: #b58b5a;
+  color: #ffffff;
 }
 body.dark .header__action {
   color: #ffffff;

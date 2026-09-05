@@ -145,3 +145,38 @@
       }
     }
   }
+  body.dark {
+    .contact {
+      background-color: #181818;
+      color: #ffffff;
+    }
+  
+    .contact__title,
+    .contact__heading {
+      color: #ffffff;
+    }
+  
+    .contact__text {
+      color: #b5b5b5;
+    }
+  
+    .contact__form {
+      background-color: #242424;
+      border-color: #383838;
+    }
+  
+    .contact__form label {
+      color: #ffffff;
+    }
+  
+    .contact__form input,
+    .contact__form textarea {
+      background-color: #303030;
+      color: #ffffff;
+      border-color: #444444;
+  
+      &::placeholder {
+        color: #999999;
+      }
+    }
+  }

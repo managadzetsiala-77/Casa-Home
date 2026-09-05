@@ -46,6 +46,8 @@ function Home() {
     }
   };
 
+  const [visibleCount, setVisibleCount] = useState(6);
+
   return (
     <main className="home">
       <section
@@ -156,13 +158,27 @@ function Home() {
     </div>
 
     <div className="products-section__grid">
-      {products.map((product) => (
+      {products.slice(0, visibleCount).map((product) => (
         <ProductCard
           key={product.id}
           product={product}
         />
       ))}
     </div>
+
+    {visibleCount < products.length && (
+      <div className="products-section__button-wrapper">
+        <button
+          className="products-section__button"
+          onClick={() =>
+            setVisibleCount((prev) => prev + 6)
+          }
+        >
+          მეტი პროდუქტი
+        </button>
+      </div>
+    )}
+
 
     <div className="products-section__button-wrapper">
       <Link

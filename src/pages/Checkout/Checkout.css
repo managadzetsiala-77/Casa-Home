@@ -124,4 +124,57 @@
   .checkout__summary {
     position: static;
   }
+}
+body.dark .checkout {
+  background-color: #181818;
+  color: #ffffff;
+}
+body.dark .checkout__form,
+body.dark .checkout__summary {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .checkout__header h1,
+body.dark .checkout__form h2,
+body.dark .checkout__summary h2 {
+  color: #ffffff;
+}
+body.dark .checkout__header p {
+  color: #b5b5b5;
+}
+body.dark .checkout__field label {
+  color: #ffffff;
+}
+body.dark .checkout__field input,
+body.dark .checkout__field select,
+body.dark .checkout__field textarea {
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #444444;
+}
+body.dark .checkout__field input::-moz-placeholder, body.dark .checkout__field select::-moz-placeholder, body.dark .checkout__field textarea::-moz-placeholder {
+  color: #999999;
+}
+body.dark .checkout__field input::placeholder,
+body.dark .checkout__field select::placeholder,
+body.dark .checkout__field textarea::placeholder {
+  color: #999999;
+}
+body.dark .checkout__product {
+  border-bottom-color: #383838;
+}
+body.dark .checkout__product h3 {
+  color: #ffffff;
+}
+body.dark .checkout__product p {
+  color: #aaaaaa;
+}
+body.dark .checkout__total {
+  border-top-color: #383838;
+}
+body.dark .checkout__total span {
+  color: #b5b5b5;
+}
+body.dark .checkout__total strong {
+  color: #ffffff;
 }/*# sourceMappingURL=Checkout.css.map */
