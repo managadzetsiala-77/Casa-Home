@@ -1,14 +1,25 @@
 @use "../../styles/variables" as *;
 
 .products-page {
+  padding:0 100px;
   background-color: $background-color;
+  .back-button{
+    background: $primary-color;
+    border: none;
+    color: $white-color;
+    cursor: pointer;
+    font-size: 14px;
 
+    &:hover{background: $secondary-color;}
+    }
   &__container {
     width: 100%;
     max-width: 1200px;
 
     margin: 0 auto;
     padding: 0 20px;
+
+    
   }
 
   &__hero {
@@ -43,7 +54,10 @@
   }
 
   &__content {
-    padding: 70px 0 100px;
+    padding: 70px 0 ;
+    // padding: 60px 20px;
+
+    
   }
 }
 

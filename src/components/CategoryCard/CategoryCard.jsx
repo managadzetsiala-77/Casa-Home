@@ -5,7 +5,7 @@ import "./CategoryCard.scss";
 function CategoryCard({ category }) {
   return (
     <Link
-      to="/products"
+      to={`/products?category=${encodeURIComponent(category.name)}`}
       className="category-card"
     >
       <span className="category-card__icon">

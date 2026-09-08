@@ -1,5 +1,16 @@
 .products-page {
+  padding: 0 100px;
   background-color: #f7f4ef;
+}
+.products-page .back-button {
+  background: #b58b5a;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.products-page .back-button:hover {
+  background: #8f6b45;
 }
 .products-page__container {
   width: 100%;
@@ -28,7 +39,7 @@
   font-size: 17px;
 }
 .products-page__content {
-  padding: 70px 0 100px;
+  padding: 70px 0;
 }
 
 .filters {

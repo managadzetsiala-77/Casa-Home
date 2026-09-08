@@ -76,9 +76,9 @@ function Home() {
             {slide.text}
           </p>
 
-          <button className="hero__button">
-            პროდუქტების ნახვა
-          </button>
+          <Link to="/products" className="hero__button">
+  პროდუქტების ნახვა
+</Link>
         </div>
 
         <button

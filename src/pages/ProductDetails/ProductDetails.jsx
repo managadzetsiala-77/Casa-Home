@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { toggleFavorite } from "../../store/favoritesSlice";
+import { useNavigate } from "react-router-dom";
 import "./ProductDetails.scss";
 
 function ProductDetails() {
   const [selectedRating, setSelectedRating] = useState(0);
 const [comment, setComment] = useState("");
 const [reviews, setReviews] = useState([]);
+const navigate = useNavigate();
   const { id } = useParams();
 
   const dispatch = useDispatch();
@@ -104,7 +106,15 @@ const [reviews, setReviews] = useState([]);
 
   return (
     <main className="product-details">
+      
       <div className="product-details__container">
+      <button
+  className="back-button"
+  onClick={() => navigate(-1)}
+>
+  ← უკან დაბრუნება
+</button>
+          
 
         <div className="product-details__breadcrumbs">
           <Link to="/">მთავარი</Link>
@@ -116,6 +126,8 @@ const [reviews, setReviews] = useState([]);
           <span>/</span>
 
           <span>{product.name}</span>
+         
+         
         </div>
 
         <div className="product-details__content">

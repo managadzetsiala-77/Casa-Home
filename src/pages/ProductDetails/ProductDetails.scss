@@ -11,6 +11,16 @@
     max-width: 1200px;
 
     margin: 0 auto;
+    button{
+      background: $primary-color;
+      border: none;
+      color: $white-color;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+
+      &:hover{background: $secondary-color;}
+      }
   }
 
   &__breadcrumbs {
@@ -31,6 +41,8 @@
         text-decoration: underline;
       }
     }
+    
+    
   }
 
   &__content {
@@ -193,7 +205,7 @@
 
     &:hover {
       background-color: $secondary-color;
-
+color: $white-color;
       transform: translateY(-2px);
     }
   }
@@ -481,7 +493,7 @@
   margin-bottom: 15px;
 
   button {
-    padding: 0;
+    padding: 0px;
     border: none;
     background: transparent;
 

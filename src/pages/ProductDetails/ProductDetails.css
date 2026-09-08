@@ -7,6 +7,17 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.product-details__container button {
+  background: #b58b5a;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.product-details__container button:hover {
+  background: #8f6b45;
+}
 .product-details__breadcrumbs {
   display: flex;
   align-items: center;
@@ -130,6 +141,7 @@
 }
 .product-details__cart-button:hover {
   background-color: #8f6b45;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 .product-details__favorite-button {
@@ -354,7 +366,7 @@
   margin-bottom: 15px;
 }
 .product-details__stars button {
-  padding: 0;
+  padding: 0px;
   border: none;
   background: transparent;
   color: #cccccc;

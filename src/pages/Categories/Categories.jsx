@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { products } from "../../data/products";
+import { useNavigate } from "react-router-dom";
 import "./Categories.scss";
 
 function Categories() {
   const [selectedCategory, setSelectedCategory] = useState("ყველა");
-
+  const navigate = useNavigate();
   const categories = [
     "ყველა",
     ...new Set(products.map((product) => product.category)),
@@ -21,7 +22,12 @@ function Categories() {
   return (
     <main className="categories">
       <div className="categories__container">
-
+      <button
+  className="back-button"
+  onClick={() => navigate(-1)}
+>
+  ← უკან დაბრუნება
+</button>
         <div className="categories__header">
           <span>CasaHome</span>
           <h1>კატეგორიები</h1>

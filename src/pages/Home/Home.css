@@ -39,6 +39,7 @@
   line-height: 1.8;
 }
 .hero__button {
+  display: inline-block;
   padding: 15px 30px;
   border: none;
   border-radius: 8px;
@@ -46,10 +47,12 @@
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
+  text-decoration: none;
   transition: 0.3s;
 }
 .hero__button:hover {
   background-color: #8f6b45;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 .hero__arrow {
