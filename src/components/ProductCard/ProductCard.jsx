@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../../store/favoritesSlice";
 import "./ProductCard.scss";
 
 function ProductCard({ product }) {
 
   const dispatch = useDispatch();
+
+  const favorites = useSelector(
+    (state) => state.favorites.items
+  );
+  
+  const isFavorite = favorites.some(
+    (item) => item.id === product.id
+  );
+
+
   return (
     <article className="product-card">
 
@@ -26,12 +36,14 @@ function ProductCard({ product }) {
           %
         </span>
 
-        <button
-  className="product-card__favorite"
+   <button
+  className={`product-card__favorite ${
+    isFavorite ? "active" : ""
+  }`}
   aria-label="რჩეულებში დამატება"
   onClick={() => dispatch(toggleFavorite(product))}
 >
-  ♡
+  {isFavorite ? "♥" : "♡"}
 </button>
       </div>
 

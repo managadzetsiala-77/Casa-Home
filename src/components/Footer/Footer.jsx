@@ -25,15 +25,15 @@ function Footer() {
               className="footer__socials"
               aria-label="სოციალური ქსელები"
             >
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/" aria-label="Facebook">
                 f
               </a>
 
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/" aria-label="Instagram">
                 ◎
               </a>
 
-              <a href="#" aria-label="Pinterest">
+              <a href="https://www.pinterest.com/" aria-label="Pinterest">
                 p
               </a>
             </div>

@@ -57,6 +57,9 @@
   color: #b58b5a;
   transform: scale(1.1);
 }
+.product-card__favorite.active {
+  color: #b56b5c;
+}
 .product-card__content {
   padding: 20px;
 }

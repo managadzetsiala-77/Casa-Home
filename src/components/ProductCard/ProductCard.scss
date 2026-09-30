@@ -87,6 +87,9 @@
 
       transform: scale(1.1);
     }
+    &.active {
+      color: #b56b5c;
+    }
   }
 
   &__content {
