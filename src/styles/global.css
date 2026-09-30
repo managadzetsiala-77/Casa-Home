@@ -54,4 +54,14 @@ body.dark .favorites,
 body.dark .checkout {
   background-color: #181818;
   color: #ffffff;
+}
+body.dark .footer {
+  background-color: #242424;
+  color: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=global.css.map */

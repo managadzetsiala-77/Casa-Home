@@ -205,7 +205,8 @@ body.dark .category-buttons button {
 }
 body.dark .category-buttons button:hover {
   border-color: #b58b5a;
-  color: #b58b5a;
+  background-color: #303030;
+  color: #ffffff;
 }
 body.dark .category-buttons button.active {
   background-color: #b58b5a;

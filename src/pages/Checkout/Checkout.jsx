@@ -38,7 +38,7 @@ function Checkout() {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.cart.items);
-  console.log("Checkout cart:", cartItems);
+ 
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -53,8 +53,7 @@ function Checkout() {
   });
 
   const onSubmit = (data) => {
-    console.log("შეკვეთის ინფორმაცია:", data);
-  
+   
     dispatch(clearCart());
   
     alert("შეკვეთა წარმატებით გაფორმდა! 🎉");

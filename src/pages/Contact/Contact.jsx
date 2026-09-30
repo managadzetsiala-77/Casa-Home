@@ -34,8 +34,6 @@ function Contact() {
   });
 
   const onSubmit = (data) => {
-    console.log("შეტყობინება:", data);
-
     setSent(true);
     reset();
   };

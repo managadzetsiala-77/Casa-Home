@@ -287,7 +287,8 @@ button {
   
         &:hover {
           border-color: $primary-color;
-          color: $primary-color;
+          background-color: #303030;
+          color: $white-color;
         }
   
         &.active {

@@ -62,4 +62,16 @@ body.dark {
     background-color:$dark-background;
     color:$white-color;
   }
+  .footer {
+    background-color: $dark-surface;
+    color: $dark-text;
+  }
+}
+
+#root {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
 }

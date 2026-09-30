@@ -3,12 +3,15 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
 import { loginSchema } from "../../schemas/loginSchema";
+import { useUserStore } from "../../store/userStore";
 import "./Login.scss";
 
 
 
 function Login() {
   const navigate = useNavigate();
+
+  const { login } = useUserStore();
 
   const [loginError, setLoginError] = useState("");
 
@@ -44,19 +47,11 @@ function Login() {
       return;
     }
 
-    localStorage.setItem(
-      "isLoggedIn",
-      "true"
-    );
-
-    localStorage.setItem(
-      "currentUser",
-      JSON.stringify({
-        name: savedUser.name,
-        email: savedUser.email,
-      })
-    );
-
+    login({
+      name: savedUser.name,
+      email: savedUser.email,
+    });
+    
     navigate("/");
   };
 

@@ -18,11 +18,17 @@ function Register() {
   });
 
   const onSubmit = (data) => {
+    const user = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
+  
     localStorage.setItem(
       "user",
-      JSON.stringify(data)
+      JSON.stringify(user)
     );
-
+  
     navigate("/login");
   };
 

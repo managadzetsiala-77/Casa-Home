@@ -6,14 +6,14 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.categories__container button {
+.categories__container .back-button {
   background: #b58b5a;
   border: none;
   color: #ffffff;
   cursor: pointer;
   font-size: 14px;
 }
-.categories__container button:hover {
+.categories__container .back-button:hover {
   background: #8f6b45;
 }
 .categories__header {

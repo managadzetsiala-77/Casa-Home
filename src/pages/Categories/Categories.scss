@@ -8,13 +8,13 @@
     &__container {
       max-width: 1200px;
       margin: 0 auto;
-      button{
+      .back-button{
         background: $primary-color;
         border: none;
         color: $white-color;
         cursor: pointer;
         font-size: 14px;
-  
+    
         &:hover{background: $secondary-color;}
         }
     }
