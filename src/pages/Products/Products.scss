@@ -1,7 +1,10 @@
 @use "../../styles/variables" as *;
 
 .products-page {
-  padding:0 100px;
+  width: 100%;
+  min-width: 0;
+  padding: 0 24px;
+  overflow-x: clip;
   background-color: $background-color;
   .back-button{
     background: $primary-color;
@@ -54,10 +57,11 @@
   }
 
   &__content {
-    padding: 70px 0 ;
-    // padding: 60px 20px;
-
-    
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 70px 0;
   }
 }
 
@@ -115,39 +119,30 @@
 
 .category-buttons {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
-}
 
-button {
-  padding: 10px 20px;
+  button {
+    padding: 10px 16px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background-color: transparent;
+    color: $text-light;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
 
-  border: 1px solid $border-color;
-  border-radius: 10px;
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
 
-  background-color: transparent;
-
-  color: $text-light;
-
-  font-size: 13px;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-
-  &:hover {
-    border-color: $primary-color;
-
-    color: $primary-color;
-  }
-
-  &.active{
+    &.active {
       background-color: $primary-color;
+      border-color: $primary-color;
       color: $white-color;
     }
-  
+  }
 }
 
 .products-header {
@@ -199,51 +194,105 @@ button {
     color: $text-light;
   }
 }
+
+/* ტაბლეტი და პატარა ლეპტოპი */
 @media (max-width: 900px) {
-    .filters {
-      grid-template-columns: 1fr;
-    }
-  
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
+  .products-page {
+    padding: 0 20px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* მობილური */
+@media (max-width: 600px) {
+  .products-page {
+    padding: 0 14px;
+
+    &__content {
+      padding: 35px 0 50px;
     }
   }
-  
-  @media (max-width: 600px) {
-    .products-page {
-      &__hero {
-        padding: 70px 0;
-      }
-  
-      &__title {
-        font-size: 36px;
-      }
-  
-      &__description {
-        font-size: 15px;
-      }
-  
-      &__content {
-        padding: 50px 0 70px;
-      }
-    }
-  
-    .filters {
-      padding: 20px;
-    }
-  
-    .products-header {
-      align-items: flex-start;
-  
-      flex-direction: column;
-  
-      gap: 8px;
-    }
-  
-    .products-grid {
-      grid-template-columns: 1fr;
+
+  .products-page__hero {
+    padding: 45px 16px;
+  }
+
+  .products-page__title {
+    font-size: 30px;
+  }
+
+  .products-page__description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .filters {
+    padding: 16px;
+    gap: 18px;
+    border-radius: 12px;
+  }
+
+  .category-buttons {
+    gap: 8px;
+
+    button {
+      padding: 9px 12px;
+      font-size: 12px;
     }
   }
+
+  .back-button {
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .products-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 23px;
+    }
+  }
+
+  .products-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .products-empty {
+    padding: 45px 16px;
+  }
+}
+
+/* ძალიან პატარა ტელეფონი */
+@media (max-width: 360px) {
+  .products-page {
+    padding: 0 10px;
+  }
+
+  .filters {
+    padding: 12px;
+  }
+
+  .category-buttons button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+}
   body.dark {
     .products-page {
       background-color: #181818;

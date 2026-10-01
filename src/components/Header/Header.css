@@ -1,209 +1,301 @@
+@charset "UTF-8";
 .header {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e0d8;
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e0d8;
+  transition: background-color 0.3s ease;
 }
 .header__container {
-  max-width: 1200px;
-  min-height: 80px;
-  margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 12px 24px;
 }
 .header__logo {
+  flex-shrink: 0;
   color: #1f1f1f;
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+.header__logo span {
+  color: #b58b5a;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 24px;
+  min-width: 0;
 }
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
+  gap: 22px;
 }
 .header__nav a {
+  position: relative;
+  white-space: nowrap;
   color: #1f1f1f;
   font-size: 14px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.2s ease;
 }
-.header__nav a:hover {
+.header__nav a:hover, .header__nav a.active {
   color: #b58b5a;
 }
 .header__nav a.active {
-  color: #b58b5a;
   font-weight: 700;
 }
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-shrink: 0;
+  gap: 8px;
 }
-.header__icon {
-  width: 38px;
-  height: 38px;
+.header__action,
+.header .theme-button, .header__menu-button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: none;
   border-radius: 50%;
-  background-color: transparent;
-  font-size: 18px;
-  transition: 0.3s;
+  background: transparent;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
-.header__icon:hover {
+.header__action:hover,
+.header .theme-button:hover, .header__menu-button:hover {
+  color: #b58b5a;
   background-color: #f7f4ef;
-  transform: translateY(-2px);
 }
-
-@media (max-width: 900px) {
-  .header__nav {
-    gap: 15px;
-  }
-  .header__nav a {
-    font-size: 13px;
-  }
-  .header__container {
-    gap: 15px;
-  }
+.header__action {
+  text-decoration: none;
 }
-@media (max-width: 700px) {
-  .header__nav {
-    display: none;
-  }
-  .header__container {
-    min-height: 70px;
-  }
-  .header__login {
-    display: none;
-  }
+.header__badge {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: #b58b5a;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1;
 }
 .header__auth {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 8px;
 }
-
-.header__login,
-.header__register {
+.header__login, .header__register, .header__logout {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 40px;
-  padding: 0 16px;
-  border-radius: 7px;
-  font-size: 14px;
+  padding: 0 14px;
+  border: 1px solid #b58b5a;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
   font-weight: 600;
-  transition: 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-
 .header__login {
-  border: 1px solid #e5e0d8;
-  background-color: #b58b5a;
-  color: #ffffff;
+  background-color: transparent;
+  color: #b58b5a;
 }
 .header__login:hover {
-  border-color: #b58b5a;
-  background-color: #8f6b45;
-  transform: translateY(-2px);
-}
-
-.header__register {
   background-color: #b58b5a;
   color: #ffffff;
 }
-.header__register:hover {
-  background-color: #8f6b45;
-  transform: translateY(-2px);
+.header__register, .header__logout {
+  background-color: #b58b5a;
+  color: #ffffff;
 }
-
+.header__register:hover, .header__logout:hover {
+  background-color: #8f6b45;
+  border-color: #8f6b45;
+}
 .header__user {
+  max-width: 150px;
+  overflow: hidden;
   color: #1f1f1f;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header__menu-button {
+  display: none;
 }
 
-.header__logout {
-  min-height: 40px;
-  padding: 0 16px;
-  border: 1px solid #e5e0d8;
-  border-radius: 7px;
-  background-color: #b58b5a;
-  color: #1f1f1f;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+/* ტაბლეტი და პატარა ლეპტოპი */
+@media (max-width: 1100px) {
+  .header__container {
+    gap: 16px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .header__menu {
+    gap: 14px;
+  }
+  .header__nav {
+    gap: 14px;
+  }
+  .header__nav a {
+    font-size: 13px;
+  }
+  .header__auth {
+    gap: 6px;
+  }
+  .header__login, .header__register, .header__logout {
+    padding: 0 10px;
+    font-size: 12px;
+  }
 }
-.header__logout:hover {
-  border-color: #b58b5a;
-  color: #ffffff;
+/* მობილურის მენიუ */
+@media (max-width: 850px) {
+  .header__container {
+    min-height: 70px;
+    padding: 10px 18px;
+  }
+  .header__logo {
+    font-size: 23px;
+  }
+  .header__menu-button {
+    display: flex;
+  }
+  .header__menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+    padding: 22px 20px 24px;
+    border-top: 1px solid #e5e0d8;
+    border-bottom: 1px solid #e5e0d8;
+    background-color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  .header__menu--open {
+    display: flex;
+  }
+  .header__nav {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+  }
+  .header__nav a {
+    padding: 12px 4px;
+    border-bottom: 1px solid #e5e0d8;
+    font-size: 15px;
+  }
+  .header__auth {
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header__login, .header__register, .header__logout {
+    min-height: 42px;
+    flex: 1;
+    font-size: 14px;
+  }
+  .header__user {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 4px 0;
+    font-size: 14px;
+  }
 }
-
-.header__action {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
+/* პატარა ტელეფონი */
+@media (max-width: 420px) {
+  .header__container {
+    min-height: 64px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .header__logo {
+    font-size: 21px;
+  }
+  .header__actions {
+    gap: 2px;
+  }
+  .header__action,
+  .header .theme-button, .header__menu-button {
+    width: 35px;
+    height: 35px;
+  }
 }
-
-.header__badge {
-  min-width: 20px;
-  height: 20px;
-  padding: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #b58b5a;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.theme-button {
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-  transition: transform 0.2s ease;
-}
-.theme-button:hover {
-  transform: rotate(15deg) scale(1.1);
-}
-
+/* მუქი თემა */
 body.dark .header {
   background-color: #242424;
   border-bottom-color: #383838;
 }
-body.dark .header__logo {
+body.dark .header__logo, body.dark .header__nav a, body.dark .header__user {
   color: #ffffff;
 }
-body.dark .header__nav a {
-  color: #ffffff;
+body.dark .header__logo span {
+  color: #b58b5a;
 }
 body.dark .header__nav a:hover, body.dark .header__nav a.active {
   color: #b58b5a;
 }
-body.dark .header__user {
+body.dark .header__action,
+body.dark .header .theme-button, body.dark .header__menu-button {
   color: #ffffff;
 }
-body.dark .header__logout {
-  border-color: #444444;
-  color: black;
+body.dark .header__action:hover,
+body.dark .header .theme-button:hover, body.dark .header__menu-button:hover {
+  background-color: #383838;
+  color: #b58b5a;
 }
-body.dark .header__logout:hover {
-  border-color: #b58b5a;
+body.dark .header__menu {
+  background-color: #242424;
+  border-color: #383838;
+}
+body.dark .header__nav a {
+  border-bottom-color: #383838;
+}
+body.dark .header__badge {
+  border-color: #242424;
+}
+body.dark .header__login {
+  color: #b58b5a;
+}
+body.dark .header__login:hover {
   color: #ffffff;
 }
-body.dark .header__action {
+body.dark .header__register, body.dark .header__logout {
   color: #ffffff;
 }/*# sourceMappingURL=Header.css.map */

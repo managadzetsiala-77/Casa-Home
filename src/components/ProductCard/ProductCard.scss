@@ -179,3 +179,45 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .product-card {
+    &__image-wrapper {
+      height: 230px;
+    }
+
+    &__content {
+      padding: 16px;
+    }
+
+    &__name {
+      min-height: 0;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    &__rating {
+      margin-bottom: 14px;
+    }
+
+    &__bottom {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    &__price {
+      font-size: 18px;
+    }
+
+    &__details {
+      padding: 9px 12px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .product-card {
+    &__image-wrapper {
+      height: 190px;
+    }
+  }
+}

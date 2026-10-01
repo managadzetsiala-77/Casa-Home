@@ -119,4 +119,36 @@
 }
 .product-card__details:hover {
   background-color: #8f6b45;
+}
+
+@media (max-width: 600px) {
+  .product-card__image-wrapper {
+    height: 230px;
+  }
+  .product-card__content {
+    padding: 16px;
+  }
+  .product-card__name {
+    min-height: 0;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .product-card__rating {
+    margin-bottom: 14px;
+  }
+  .product-card__bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .product-card__price {
+    font-size: 18px;
+  }
+  .product-card__details {
+    padding: 9px 12px;
+  }
+}
+@media (max-width: 360px) {
+  .product-card__image-wrapper {
+    height: 190px;
+  }
 }/*# sourceMappingURL=ProductCard.css.map */
